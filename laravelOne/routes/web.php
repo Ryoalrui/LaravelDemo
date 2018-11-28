@@ -10,9 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//主页
-Route::get('/','StaticPagesController@home');
-//帮助页
-Route::get('/help','StaticPagesController@help');
-//关于页
-Route::get('about','StaticPagesController@about');
+//主页路由
+Route::get('/','StaticPagesController@home')->name('home');
+//帮助页路由
+Route::get('/help','StaticPagesController@help')->name('help');
+//关于页路由
+Route::get('about','StaticPagesController@about')->name('about');
+//登陆路由
+Route::get('signup','UsersController@create')->name('signup');
